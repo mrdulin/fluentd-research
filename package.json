@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/mrdulin/fluentd-research#readme",
   "dependencies": {
-    "fluent-logger": "^2.7.0"
+    "express": "^4.16.3",
+    "fluent-logger": "^2.7.0",
+    "log4js": "^2.8.0",
+    "log4js-fluent-appender": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
