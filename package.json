@@ -1,0 +1,30 @@
+{
+  "name": "fluentd-research",
+  "version": "1.0.0",
+  "description": "## 参考链接",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdulin/fluentd-research.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrdulin/fluentd-research/issues"
+  },
+  "homepage": "https://github.com/mrdulin/fluentd-research#readme",
+  "dependencies": {
+    "fluent-logger": "^2.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "^5.1.1"
+  }
+}
