@@ -1,4 +1,4 @@
-version: '3'  
+version: '3.5'  
 services: 
   mongo:
     image: mongo
@@ -6,6 +6,14 @@ services:
       - "27017:27107"
     volumes: 
       - /data/db:/data/db
+    healthcheck:
+      test: "echo 'db.stats().ok' | mongo localhost:27017 --quiet"
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks: 
+      - fluentd-research
 
   fluentd-research:
     build: 
@@ -17,7 +25,11 @@ services:
       - mongo
     volumes: 
       - ./src/output-to-mongodb:/fluentd/etc
+    networks: 
+      - fluentd-research
       
-
+networks: 
+  fluentd-research:
+    name: fluentd-research
 
   
